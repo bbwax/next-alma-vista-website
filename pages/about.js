@@ -10,7 +10,7 @@ export default function About() {
                     website.
                 </p>
             </div>
-            <div className="bg-blue-500 text-amber-600 p-4">
+            <div className="bg-blue-500 text-red-600 p-4">
                 This is a div with a blue background and white text.
             </div>
         </>

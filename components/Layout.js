@@ -3,10 +3,10 @@ import Navbar from './Navbar';
 
 export default function Layout({ children }) {
   return (
-    <div>
-      <Header />
+    <div className="relative min-h-screen">
       <Navbar />
-      <main>{children}</main>
+      <Header />
+      <main className="pt-24">{children}</main>
     </div>
   );
 }
