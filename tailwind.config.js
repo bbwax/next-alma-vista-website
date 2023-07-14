@@ -20,7 +20,8 @@ module.exports = {
         'sunset': '#FDB813',
       },
       animation: {
-        fadeIn: 'fadeIn 4s ease-in-out',
+        fadeIn: 'fadeIn 2s ease-in-out forwards',
+        fadeInDelay: 'fadeIn 2s ease-in-out 2s forwards',
       },
       keyframes: {
         fadeIn: {
