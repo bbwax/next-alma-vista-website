@@ -12,8 +12,8 @@ export default function AnimateDownArrow() {
     }
   
     const handleClick = () => {
-      // Scrolling to 100px below the top of the page
-      window.scrollTo({ top: 100, behavior: 'smooth' });
+      // Scrolling to 300px below the top of the page
+      window.scrollTo({ top: 300, behavior: 'smooth' });
     }
   
     useEffect(() => {
