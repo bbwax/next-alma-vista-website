@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const router = useRouter();
@@ -7,8 +8,9 @@ export default function Header() {
 
   return (
     <header className={`sticky container mx-auto ${isHomePage ? 'text-white' : 'bg-sunset'}`}>
-      <Image src="/images/logo.png" alt="Alma Vista Logo" width={300} height={300} />
-      
+      <Link href="/">
+        <Image  src="/images/logo.png" alt="Alma Vista Logo" width={300} height={300} />
+      </Link>
     </header>
   );
 }

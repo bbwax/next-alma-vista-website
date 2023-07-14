@@ -9,19 +9,16 @@ export default function Navbar() {
     <nav className={`sticky container mx-auto ${isHomePage ? 'text-white' : 'bg-sunset'}`}>
       <ul className="flex justify-center space-x-4 ">
         <li>
-          <Link href="/">Home</Link>
+          <Link className="sm:m-4" href="/about">About</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link className="sm:m-4" href="/photos">Photos</Link>
         </li>
         <li>
-          <Link href="/photos">Photos</Link>
+          <Link className="sm:m-4" href="/contact">Contact</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/reservations">Reservations</Link>
+          <Link className="sm:m-4" href="/reservations">Reservations</Link>
         </li>
       </ul>
     </nav>
