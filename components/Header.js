@@ -1,12 +1,14 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Header() {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
   return (
-    <header className={`container mx-auto p-4 ${isHomePage ? 'bg-transparent' : 'bg-sunset'}`}>
-      <h1 className="text-2xl text-white">Alma Vista</h1>
+    <header className={`sticky container mx-auto ${isHomePage ? 'text-white' : 'bg-sunset'}`}>
+      <Image src="/images/logo.png" alt="Alma Vista Logo" width={300} height={300} />
+      
     </header>
   );
 }

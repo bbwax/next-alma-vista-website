@@ -6,32 +6,22 @@ export default function Navbar() {
   const isHomePage = router.pathname === '/';
 
   return (
-    <nav className={`fixed top-0 z-10 p-4 w-full ${isHomePage ? 'bg-transparent' : 'bg-sunset'}`}>
+    <nav className={`sticky container mx-auto ${isHomePage ? 'text-white' : 'bg-sunset'}`}>
       <ul className="flex justify-center space-x-4 ">
         <li>
-          <Link href="/"
-            className="text-white hover:text-blue-700">Home
-          </Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about"
-            className="text-white hover:text-blue-700">About
-          </Link>
+          <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/photos"
-             className="text-white hover:text-blue-700">Photos
-          </Link>
+          <Link href="/photos">Photos</Link>
         </li>
         <li>
-          <Link href="/contact"
-            className="text-white hover:text-blue-700">Contact
-          </Link>
+          <Link href="/contact">Contact</Link>
         </li>
         <li>
-          <Link href="/reservations"
-             className="text-white hover:text-blue-700">Reservations
-          </Link>
+          <Link href="/reservations">Reservations</Link>
         </li>
       </ul>
     </nav>
