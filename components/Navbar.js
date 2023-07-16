@@ -18,7 +18,7 @@ export default function Navbar() {
           <Link className="sm:m-4" href="/contact">Contact</Link>
         </li>
         <li>
-          <Link className="sm:m-4" href="/reservations">Reservations</Link>
+        <a className="sm:m-4" href="/reservations">Reservations</a>
         </li>
       </ul>
     </nav>
