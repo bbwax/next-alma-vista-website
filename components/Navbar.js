@@ -6,7 +6,7 @@ export default function Navbar() {
   const isHomePage = router.pathname === '/';
 
   return (
-    <nav className={`sticky container mx-auto ${isHomePage ? 'text-white' : 'bg-sunset'}`}>
+    <nav className={`sticky container w-screen ${isHomePage ? 'text-white' : 'bg-transparent'}`}>
       <ul className="flex justify-center space-x-4 ">
         <li>
           <Link className="sm:m-4" href="/about">About</Link>

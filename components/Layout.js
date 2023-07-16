@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import HomePageHeader from './HomePageHeader';
 import StandardHeader from './StandardHeader';
+import Footer from './Footer';
+
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -10,6 +12,10 @@ export default function Layout({ children }) {
     <div className="relative min-h-screen">
       {isHomePage ? <HomePageHeader /> : <StandardHeader />}
       <main className="">{children}</main>
+      <div>
+        <Footer/>
+      </div>
     </div>
+    
   );
 }

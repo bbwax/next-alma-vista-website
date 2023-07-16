@@ -1,4 +1,5 @@
-
+import images from "@/data/images";
+import Carousel from "@/components/Carousel";
 
 export default function Photos() {
   return (
@@ -8,6 +9,9 @@ export default function Photos() {
         <p className="mt-4">
           This is the photos page. Here you can display a gallery of images.
         </p>
+      </div>
+      <div>
+        <Carousel images={images}/>
       </div>
     </>
   );

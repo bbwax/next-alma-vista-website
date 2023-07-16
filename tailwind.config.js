@@ -12,6 +12,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      colors: {
+        peach: '#FE8714',
+      },
       backgroundImage: {
         'header-image': "url('/images/AlmaVistaSunset.jpg')",
         
