@@ -12,12 +12,11 @@ export default function Reservations() {
 
   return (
     <div>
-      <h1 className="text-3xl font-semibold">Reservations Page</h1>
-        <p className="mt-4">
-          This is the reservations page. Here you can allow users to make reservations.
-        </p>
+      <div className='container mx-auto p-4 font-sans flex justify-center'>
+        <h1 className='text-3xl font-semibold'>Select Dates</h1>
+      </div>
       <BookingWidget key={key} />
-      <Carousel images={images}/>
+      <Carousel images={images} />
     </div>
   );
 }

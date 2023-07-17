@@ -37,6 +37,9 @@ module.exports = {
           'opacity': 'opacity',
         },
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       
     },
   },

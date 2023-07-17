@@ -4,12 +4,13 @@ import StandardHeader from './StandardHeader';
 import Footer from './Footer';
 
 
+
 export default function Layout({ children }) {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen font-sans">
       {isHomePage ? <HomePageHeader /> : <StandardHeader />}
       <main className="">{children}</main>
       <div>

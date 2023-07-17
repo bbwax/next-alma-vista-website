@@ -4,11 +4,8 @@ import Carousel from "@/components/Carousel";
 export default function Photos() {
   return (
     <>
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-semibold">Photos Page</h1>
-        <p className="mt-4">
-          This is the photos page. Here you can display a gallery of images.
-        </p>
+      <div className="container mx-auto p-4 font-sans flex justify-center">
+        <h1 className="text-3xl font-semibold">Photos</h1>
       </div>
       <div>
         <Carousel images={images}/>
