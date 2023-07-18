@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { AiFillInstagram, AiTwotoneHome} from 'react-icons/ai'; 
 
 
+
 export default function Footer() {
     return (
         <div className="relative h-[33vh] w-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/pinecrestmarina.png')" }}>
