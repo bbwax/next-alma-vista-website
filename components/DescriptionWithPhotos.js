@@ -1,13 +1,16 @@
 import FadeIn from "./FadeIn";
 
 export function DescriptionWithPhotos({ items = [
-    { src: '/images/livingroom1.png', description: 'Default Description 1' },
-    { src: '/images/hottub4.png', description: 'Default Description 2' },
-    { src: '/images/livingroom2.png', description: 'Default Description 3' },
-    { src: '/images/hottub2.png', description: 'Default Description 4' },
+    { src: '/images/livingroom1.png', description: ' The cabin features a 2-story wrap-around deck with breathtaking views and starry nights.' },
+    { src: '/images/hottub4.png', description: ' After a day of exploring, unwind in the 6 person hot tub.' },
+    { src: '/images/livingroom2.png', description: 'Inside, the cabin is cozy and comfortable with all the amenities you need.' },
+    { src: '/images/hottub2.png', description: ' Book your stay at Alma Vista and experience the beauty of the 108!' },
     // add more items as needed
 ] }) {
 
+
+    
+   
     const variants = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
@@ -20,7 +23,7 @@ export function DescriptionWithPhotos({ items = [
                         {/* For mobile screens: photo and description are always in this order */}
                         <div className="md:hidden">
                             <img className="object-cover w-full py-6" src={item.src} alt={item.description} />
-                            <p className="text-center text-2xl py-12">{item.description}</p>
+                            <p className="text-center text-2xl py-12 px-2">{item.description}</p>
                         </div>
                         {/* For larger screens: order of photo and description alternates */}
                         <div className="hidden md:flex">
@@ -28,13 +31,13 @@ export function DescriptionWithPhotos({ items = [
                                 <>
                                     <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
                                     <div className="w-1/2 flex items-center justify-center p-8 py-12">
-                                        <p className="text-2xl">{item.description}</p>
+                                        <p className="text-4xl px-2">{item.description}</p>
                                     </div>
                                 </>
                             ) : (
                                 <>
                                     <div className="w-1/2 flex items-center justify-center p-8 py-12">
-                                        <p className="text-2xl">{item.description}</p>
+                                        <p className="text-4xl px-2">{item.description}</p>
                                     </div>
                                     <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
                                 </>

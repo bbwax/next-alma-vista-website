@@ -1,5 +1,6 @@
 import images from "@/data/images";
 import Carousel from "@/components/Carousel";
+import FadeIn from "@/components/FadeIn";
 
 export default function Photos() {
   return (
@@ -8,8 +9,12 @@ export default function Photos() {
         <h1 className="text-3xl font-semibold">Photos</h1>
       </div>
       <div>
-        <Carousel images={images}/>
-      </div>
+        <FadeIn>
+          <div>
+            <Carousel images={images} />
+          </div>
+        </FadeIn>
+      </div >
     </>
   );
 }

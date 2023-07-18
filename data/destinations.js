@@ -1,0 +1,1 @@
+export const destinations = ['Pinecrest Lake', 'Yosemite', 'Kennedy Meadows', 'Tuolumne Grove', 'Dodge Ridge', 'Downtown Sonora'];

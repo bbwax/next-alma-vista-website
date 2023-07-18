@@ -2,6 +2,7 @@ import BookingWidget from '@/components/BookingWidget';
 import { useState, useEffect } from 'react';
 import Carousel from '@/components/Carousel';
 import images from "@/data/images";
+import FadeIn from '@/components/FadeIn';
 
 export default function Reservations() {
   const [key, setKey] = useState(Date.now());
@@ -16,7 +17,13 @@ export default function Reservations() {
         <h1 className='text-3xl font-semibold'>Select Dates</h1>
       </div>
       <BookingWidget key={key} />
-      <Carousel images={images} />
+      <div>
+        <FadeIn>
+          <div>
+            <Carousel images={images} />
+          </div>
+        </FadeIn>
+      </div>
     </div>
   );
 }
