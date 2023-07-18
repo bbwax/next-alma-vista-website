@@ -13,14 +13,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        peach: '#FE8714',
+        peach: '#DCDFF6',
       },
       backgroundImage: {
         'header-image': "url('/images/AlmaVistaSunset.jpg')",
         
       },
       backgroundColor: {
-        'sunset': '#FDB813',
+        'sunset': '#DCDFF6',
       },
       animation: {
         fadeIn: 'fadeIn 2s ease-in-out forwards',
