@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   const isHomePage = router.pathname === '/';
 
   return (
-    <div className="relative min-h-screen font-sans">
+    <div className="relative min-h-screen font-recoleta">
       {isHomePage ? <HomePageHeader /> : <StandardHeader />}
       <main className="">{children}</main>
       <div>

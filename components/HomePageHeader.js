@@ -12,10 +12,12 @@ export default function HomePageHeader() {
         <div className="pt-5">
           <Header className='container mx-auto flex justify-center items-center' />
         </div>
-        <Navbar />
+        <div className="sticky top-10 z-50">
+          <Navbar />
+        </div>
         <AnimatedText />
       </div>
-      <AnimateDownArrow/>
+      <AnimateDownArrow />
     </div>
   );
 }

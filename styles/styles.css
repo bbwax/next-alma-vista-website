@@ -30,3 +30,8 @@
     0% {opacity:1;}
     100% {opacity:0;}
   }
+
+  @font-face {
+    font-family: 'Recoleta Medium';
+    src: url('/fonts/Recoleta-Medium.ttf') format('truetype');
+  }

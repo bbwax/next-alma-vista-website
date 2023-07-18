@@ -39,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
+        recoleta: ['Recoleta Medium', 'sans-serif'],
       },
       
     },
