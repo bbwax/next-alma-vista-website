@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "joi": "^17.9.2",
     "mongodb": "^5.7.0",
     "next": "13.4.8",

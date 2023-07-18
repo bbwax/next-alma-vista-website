@@ -34,7 +34,6 @@ const images = [
     { src: '/images/theater2.png', alt: 'Image 2', description: 'This is image 34' },
     { src: '/images/theater3.png', alt: 'Image 2', description: 'This is image 35' },
     { src: '/images/view1.png', alt: 'Image 2', description: 'This is image 36' },
- 
   ];
   
   export default images;

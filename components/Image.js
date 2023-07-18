@@ -5,7 +5,7 @@ export default function Image({ src, alt, description, className, index, total, 
       <img className="object-cover" src={src} alt={alt} />
       <p className="text-center">{description}</p>
       {typeof index === 'number' && typeof total === 'number' && (
-        <p className="text-center">{`${index + 1}/${total}`}</p>
+        <p className="text-center">{`${index }/${total}`}</p>
       )}
     </div>
   );
