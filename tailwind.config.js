@@ -20,7 +20,7 @@ module.exports = {
         
       },
       backgroundColor: {
-        'sunset': '#DCDFF6',
+        'sunset': '#FFF4EB',
       },
       animation: {
         fadeIn: 'fadeIn 2s ease-in-out forwards',

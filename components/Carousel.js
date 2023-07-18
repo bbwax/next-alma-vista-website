@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import Image from './Image';
 import Navigation from './Navigation';
+import PhotoModal from './PhotoModal';
 
 export default function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log('Opening modal');
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
@@ -16,8 +27,10 @@ export default function Carousel({ images }) {
   return (
     <div className="flex justify-center items-center w-screen h-4/6 pt-24 pb-24">
       <Navigation direction="prev" onClick={prevImage} image={{...images[(currentIndex - 1 + images.length) % images.length], index: null, total: null, description: ''}} />
-      <Image className="w-1/2" index={currentIndex + 1} total={images.length} {...images[currentIndex]} />
+      <Image className="w-1/2 cursor-pointer" index={currentIndex + 1} total={images.length} {...images[currentIndex]} onClick={openModal} />
       <Navigation direction="next" onClick={nextImage} image={{...images[(currentIndex + 1) % images.length], index: null, total: null, description: ''}} />
+
+      <PhotoModal isOpen={isModalOpen} onClose={closeModal} images={images} currentIndex={currentIndex} />
     </div>
   );
 }

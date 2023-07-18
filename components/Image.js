@@ -1,11 +1,12 @@
-import React from 'react';
 
-export default function Image({ src, alt, description, className, index, total }) {
+export default function Image({ src, alt, description, className, index, total, onClick }) {
   return (
-    <div className={`${className} flex flex-col items-center`}>
+    <div className={`${className} flex flex-col items-center`} onClick={onClick}>
       <img className="object-cover" src={src} alt={alt} />
-      {description ? <p className="text-center">{description}</p> : null} {/* Only display the description if it's not empty */}
-      {index && total ? <p className="text-center">{index}/{total}</p> : null} {/* Only display the image number and total if they are not null */}
+      <p className="text-center">{description}</p>
+      {typeof index === 'number' && typeof total === 'number' && (
+        <p className="text-center">{`${index + 1}/${total}`}</p>
+      )}
     </div>
   );
 }
