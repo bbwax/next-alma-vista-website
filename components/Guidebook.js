@@ -6,7 +6,7 @@ export default function Guidebook() {
         {
             name: 'Pinecrest Lake',
             description: 'Pinecrest Lake is a true gem of the Sierra Nevadas. Here, you can enjoy boat rentals and explore the lake at your own pace. Don’t forget to try the local cuisine at the lakeside restaurant. If you’re feeling more adventurous, there are several hiking trails that offer stunning views of the lake and surrounding forest.',
-            image: '/images/pinecrest_Lake.jpg',
+            image: '/images/pinecrest-lake.jpg',
             thingsToDo: ['Boat Rentals', 'Restaurant', 'Hiking Trails'],
         },
         {
