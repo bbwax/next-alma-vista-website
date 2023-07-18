@@ -6,7 +6,7 @@ export default function Navbar({ className }) {
   const isHomePage = router.pathname === '/';
 
   return (
-    <nav className={`${className} sm:text-xl text-md sticky container w-screen pb-3 ${isHomePage ? 'text-white' : 'bg-transparent'} font-recoleta`}>
+    <nav className={`${className} sm:text-xl text-md sticky container w-screen pb-3 ${isHomePage ? 'text-white' : ' text-gray-200 bg-transparent'} font-recoleta`}>
       <ul className="flex flex-row justify-center space-x-4 ">
        
           <li>
