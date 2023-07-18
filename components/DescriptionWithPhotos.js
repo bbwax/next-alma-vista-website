@@ -6,18 +6,30 @@ export function DescriptionWithPhotos({ items = [
     return (
       <div>
         {items.map((item, index) => (
-          <div key={index} className="flex flex-col md:flex-row h-[500px] space-y-2 md:space-y-0 md:space-x-2">
-            {index % 2 === 0 ? (
-              <>
-                <img className="object-cover flex-1 sm:w-2/3 sm:p-8 py-6" src={item.src} alt={item.description} />
-                <p className="flex sm:pr-12 items-center justify-center text-2xl py-12">{item.description}</p>
-              </>
-            ) : (
-              <>
-                <p className="flex sm:pl-12 items-center justify-center text-2xl">{item.description}</p>
-                <img className="object-cover flex-1 sm:w-2/3 sm:p-8 py-12" src={item.src} alt={item.description} />
-              </>
-            )}
+          <div key={index} className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 justify-center">
+            {/* For mobile screens: photo and description are always in this order */}
+            <div className="md:hidden">
+              <img className="object-cover w-full py-6" src={item.src} alt={item.description} />
+              <p className="text-center text-2xl py-12">{item.description}</p>
+            </div>
+            {/* For larger screens: order of photo and description alternates */}
+            <div className="hidden md:flex">
+              {index % 2 === 0 ? (
+                <>
+                  <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
+                  <div className="w-1/2 flex items-center justify-center p-8 py-12">
+                    <p className="text-2xl">{item.description}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-1/2 flex items-center justify-center p-8 py-12">
+                    <p className="text-2xl">{item.description}</p>
+                  </div>
+                  <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
+                </>
+              )}
+            </div>
           </div>
         ))}
       </div>
