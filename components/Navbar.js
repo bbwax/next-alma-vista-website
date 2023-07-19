@@ -20,7 +20,7 @@ export default function Navbar({ className }) {
           </li>
         
         <li>
-          <a href="/reservations" className="flex flex-row shrink-0 px-3 py-2 text-lg font-semibold bg-white rounded-full shadow-md hover:bg-gray-100 text-gray-500 min-w-[110px]">Book Now</a>
+          <a href="/reservations" className="flex flex-row shrink-0 px-3 py-1 text-lg font-semibold bg-white rounded-full shadow-md hover:bg-gray-100 text-gray-500 min-w-[110px]">Book Now</a>
         </li>
       </ul>
     </nav>
