@@ -14,7 +14,7 @@ export default function Reservations() {
 
   return (
     <div>
-      <div className='container mx-auto p-4 font-sans flex justify-center'>
+      <div className='container mx-auto p-4 flex justify-center'>
         <h1 className='text-3xl font-semibold'>Select Dates</h1>
       </div>
       <div>

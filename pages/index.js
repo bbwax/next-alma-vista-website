@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
 
-      <div className="font-sans container mx-auto p-4">
+      <div className="container mx-auto p-4">
         <h1 className="text-3xl font-semibold flex justify-center">Welcome</h1>
         <p className=' text-lg p-2 sm:p-4 flex justify-center'>
           to Alma Vista, the gateway to exploring the Sierra Nevadas. A place to connect with nature, people, and the moment.

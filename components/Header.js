@@ -7,9 +7,11 @@ export default function Header({ className }) { // accept className as a prop
   const isHomePage = router.pathname === '/';
 
   return (
-    <header className={`${className} ${isHomePage ? 'text-white' : 'bg-transparent'} font-sans`}>
+    <header className={`${className} ${isHomePage ? 'text-white' : 'bg-transparent'}`}>
       <Link href="/" >
-        <Image className={` ${className} ${isHomePage ? 'sm:max-h-[300px] max-h-[150px]' : ''}`} src="/images/logo.png" alt="Alma Vista Logo" width={300} height={300} layout='responsive' />
+        <div className='w-'>
+          <Image className={` ${className} ${isHomePage ? 'sm:max-h-[300px] max-h-[150px]' : ''}`} src="/images/logo.png" alt="Alma Vista Logo"  width={250} height={250} />
+        </div>
       </Link>
     </header>
   );
