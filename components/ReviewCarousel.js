@@ -16,7 +16,7 @@ function StarRating({ stars }) {
 
 export default function ReviewCarousel() {
     return (
-        <div className='shadow-xl bg-white'>
+        <div className='shadow-xl bg-white w-full sm:w-2/3 lg:w-1/2 mx-auto'>
             <Carousel autoPlay interval={5000} infiniteLoop useKeyboardArrows showThumbs={false}>
                 {reviews.map((review) => (
                     <div key={review.id} className="p-8  bg-white rounded text-center ">
