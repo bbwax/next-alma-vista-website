@@ -17,7 +17,7 @@ export default function BookingWidget() {
 
   return (
     <div
-      className="igms-direct-booking-widget p-2 sm:p-24"
+      className="igms-direct-booking-widget p-2 sm:p-24 "
       id="directBooking1689466769227"
       data-listing-id="b8df0b8b-0d39-4a9b-adb0-538929bb13c7"
       data-widget-color="#DD831D"
