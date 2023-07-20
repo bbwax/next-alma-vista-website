@@ -45,7 +45,7 @@ export default function ContactPage() {
         <div className="flex flex-col md:flex-row w-full items-center justify-center md:my-4">
             <div className="w-full md:w-1/2 p-4 mt-">
                 <div className='md:flex md:flex-col md:items-center md:justify-center m-4'>
-                    <h2 className="text-2xl m-4 text-center">Contact Us</h2>
+                    <h2 className="text-3xl font-semibold flex justify-center pb-4">Contact Us</h2>
                     <p className='text-center'>
                         If there are any questions, concerns, or enthusiasm to learn more about this wonderful place,<br/>
                         Fill out the form below!

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiFillInstagram, AiTwotoneHome} from 'react-icons/ai'; 
+import { AiFillInstagram, AiTwotoneHome} from 'react-icons/ai';
 
 
 
