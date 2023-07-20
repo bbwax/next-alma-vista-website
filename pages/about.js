@@ -1,6 +1,7 @@
 import { IconList } from "@/components/IconList";
 import { amenities } from "@/data/amenities";
 import { destinations } from "@/data/destinations";
+import { FloorPlan } from "@/components/FloorPlan";
 import { DescriptionWithPhotos } from "@/components/DescriptionWithPhotos";
 import Guidebook from "@/components/Guidebook";
 
@@ -20,10 +21,13 @@ export default function About() {
                 <DescriptionWithPhotos />
             </div>
             <div>
+                <FloorPlan />
+            </div>
+            <div>
                 <IconList list={destinations} />
             </div>
             <div className='p-4 sm:p-12'>
-                <Guidebook/>
+                <Guidebook />
             </div>
         </>
     );
