@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineClose } from 'react-icons/ai'
+import ModalComponent from './ModalComponent';
 
 export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
   const [index, setIndex] = useState(currentIndex);
@@ -46,13 +47,9 @@ export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
     }
   };
 
-  if (!isOpen) {
-    return null;
-  }
-
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50" onClick={handleClickOutside}>
-      <div ref={modalRef} className="bg-white relative"
+    <ModalComponent isOpen={isOpen} onRequestClose={onClose}>
+      <div ref={modalRef} className="flex items-center justify-center h-full bg-white relative"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}>
         <button onClick={onClose} className="absolute top-1 right-1 text-black bg-sunset font-bold rounded-full p-2 transform active:scale-90 transition duration-150">
@@ -66,6 +63,6 @@ export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
           <AiOutlineDoubleRight />
         </button>
       </div>
-    </div>
+    </ModalComponent>
   );
 }
