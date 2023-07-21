@@ -20,6 +20,18 @@ export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
     };
   }, [currentIndex, onClose]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);
   }

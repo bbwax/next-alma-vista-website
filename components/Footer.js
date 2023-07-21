@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiFillInstagram, AiTwotoneHome} from 'react-icons/ai';
+import { AiFillInstagram, AiTwotoneHome } from 'react-icons/ai';
+import MapsAPI from './MapsAPI';
 
 
 
@@ -24,6 +25,9 @@ export default function Footer() {
                 </div>
 
                 <div className="space-y-3">
+                    <div className="border-l-2 border-white pl-4">
+                        <MapsAPI/>
+                    </div>
                     <div className="border-l-2 border-white pl-4">
                         <a href="https://www.instagram.com/the.alma.vista/" target="_blank" rel="noreferrer" className="text-white"><AiFillInstagram size={24} /></a>
                     </div>
