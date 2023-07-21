@@ -9,8 +9,8 @@ export function DescriptionWithPhotos({ items = [
 ] }) {
 
 
-    
-   
+
+
     const variants = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
@@ -29,17 +29,26 @@ export function DescriptionWithPhotos({ items = [
                         <div className="hidden md:flex">
                             {index % 2 === 0 ? (
                                 <>
-                                    <img className="object-cover w-2/3 p-8 py-6 px-2 rounded-xl" src={item.src} alt={item.description} />
-                                    <div className="w-1/2 flex items-center justify-center p-8 py-12">
-                                        <p className="text-4xl px-2">{item.description}</p>
+                                    <div className=" flex items-center">
+                                        <div className="w-2/3 p-8 py-6 px-2">
+                                            <img className="object-cover  rounded-xl shadow-lg" src={item.src} alt={item.description} />
+                                        </div>
+                                        <div className="w-1/2 flex items-center justify-center p-8 py-12">
+                                            <p className="text-4xl px-2">{item.description}</p>
+                                        </div>
                                     </div>
+
                                 </>
                             ) : (
                                 <>
-                                    <div className="w-1/2 flex items-center justify-center p-8 py-12">
-                                        <p className="text-4xl px-2">{item.description}</p>
+                                    <div className=" flex items-center">
+                                        <div className="w-1/2 flex items-center justify-center p-8 py-12">
+                                            <p className="text-4xl px-2">{item.description}</p>
+                                        </div>
+                                        <div className="w-2/3 p-8 py-6 px-2">
+                                            <img className="object-cover  rounded-xl shadow-lg" src={item.src} alt={item.description} />
+                                        </div>
                                     </div>
-                                    <img className="object-cover w-2/3 p-8 py-6 rounded-xl px-2" src={item.src} alt={item.description} />
                                 </>
                             )}
                         </div>
