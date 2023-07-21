@@ -3,7 +3,6 @@ import { AiFillCompass, AiOutlineClose } from 'react-icons/ai';
 import Modal from 'react-modal';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-// Please adjust these styles according to your needs.
 Modal.setAppElement('#__next');
 
 export default function MapsAPI() {
