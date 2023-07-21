@@ -13,7 +13,7 @@ export default function NavbarIcon() {
     };
 
     const fetchQuote = async () => {
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('https://api.quotable.io/random?author=Thich+Nhat+Hanh+%7C+The+Buddha+%7C+Pema+Ch%C3%B6dr%C3%B6n+%7C+Alan+Watts');
         const data = await response.json();
         setQuote(`${data.content} — ${data.author}`);
     }
@@ -45,20 +45,20 @@ export default function NavbarIcon() {
                         variants={variants}
                         transition={{ duration: 0.8 }}
                     >
-                        <button className="absolute top-4 right-4" onClick={() => setIsOpen(false)}>
+                        <button className="absolute top-6 right-4 md:right-8" onClick={() => setIsOpen(false)}>
                             <AiOutlineClose size={40} />
                         </button>
-                        <nav className="space-y-12 flex flex-col justify-center items-center">
+                        <nav className="space-y-12 flex flex-col justify-center items-center pt-12 md:pt-6">
                             {['about', 'contact', 'photos', 'reservations'].map(page => (
                                 <Link key={page} href={`/${page}`}>
-                                    <motion.a
-                                        className="cursor-pointer hover:text-blue-400 "
+                                    <motion.div
+                                        className="cursor-pointer hover:text-orange-400 "
                                         onClick={() => setIsOpen(false)}
                                         whileHover={{ scale: 1.1 }}
                                         transition={{ duration: 0.3 }}
                                     >
                                         {page.charAt(0).toUpperCase() + page.slice(1)}
-                                    </motion.a>
+                                    </motion.div>
                                 </Link>
                             ))}
                         </nav>
