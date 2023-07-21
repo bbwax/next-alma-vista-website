@@ -21,15 +21,15 @@ export function DescriptionWithPhotos({ items = [
                 <FadeIn key={index}>
                     <div key={index} className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 justify-center">
                         {/* For mobile screens: photo and description are always in this order */}
-                        <div className="md:hidden">
-                            <img className="object-cover w-full py-6" src={item.src} alt={item.description} />
+                        <div className="md:hidden px-3 pt-6">
+                            <img className="object-cover w-full rounded-xl shadow-lg" src={item.src} alt={item.description} />
                             <p className="text-center text-2xl py-12 px-2">{item.description}</p>
                         </div>
                         {/* For larger screens: order of photo and description alternates */}
                         <div className="hidden md:flex">
                             {index % 2 === 0 ? (
                                 <>
-                                    <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
+                                    <img className="object-cover w-2/3 p-8 py-6 px-2 rounded-xl" src={item.src} alt={item.description} />
                                     <div className="w-1/2 flex items-center justify-center p-8 py-12">
                                         <p className="text-4xl px-2">{item.description}</p>
                                     </div>
@@ -39,7 +39,7 @@ export function DescriptionWithPhotos({ items = [
                                     <div className="w-1/2 flex items-center justify-center p-8 py-12">
                                         <p className="text-4xl px-2">{item.description}</p>
                                     </div>
-                                    <img className="object-cover w-2/3 p-8 py-6" src={item.src} alt={item.description} />
+                                    <img className="object-cover w-2/3 p-8 py-6 rounded-xl px-2" src={item.src} alt={item.description} />
                                 </>
                             )}
                         </div>

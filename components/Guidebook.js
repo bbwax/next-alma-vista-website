@@ -54,7 +54,7 @@ export default function Guidebook() {
                 <FadeIn key={index}>
                     <h2 className="text-2xl font-bold mb-2">{destination.name}</h2>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-                        <Image className="object-cover w-full md:w-1/2" src={destination.image} alt={destination.name} width={500} height={300} />
+                        <Image className="object-cover w-full md:w-1/2 rounded-xl" src={destination.image} alt={destination.name} width={500} height={300} />
                         <div className="md:w-1/2">
                             <p className="my-4">{destination.description}</p>
                             <h3 className="text-xl font-bold mb-2">Things to Do</h3>

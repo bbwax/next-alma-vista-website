@@ -1,0 +1,1 @@
+export const homeInfo = ['10 Guests', '3 Bedrooms', '9 Beds', '2 Baths'];

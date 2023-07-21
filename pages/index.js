@@ -2,6 +2,10 @@ import { IconList } from "@/components/IconList";
 import { destinations } from "@/data/destinations";
 import Guidebook from "@/components/Guidebook";
 import ReviewCarousel from "@/components/ReviewCarousel";
+import { amenities } from "@/data/amenities";
+import Carousel from "@/components/Carousel";
+import FadeIn from "@/components/FadeIn";
+import images from "@/data/images";
 
 export default function Home() {
   return (
@@ -13,11 +17,21 @@ export default function Home() {
           to Alma Vista, the gateway to exploring the Sierra Nevadas. A place to connect with nature, people, and the moment.
         </p>
       </div>
-      <div className="py-6">
+      <div>
+        <IconList list={amenities} />
+      </div>
+      <div>
+        <FadeIn>
+          <div>
+            <Carousel images={images} />
+          </div>
+        </FadeIn>
+      </div >
+      <div className="py-6 px-3">
         <ReviewCarousel />
       </div>
       <div className="p-4 pt-8">
-        <IconList list={destinations}/>
+        <IconList list={destinations} />
       </div>
       <div className='p-4 sm:p-12'>
         <Guidebook />

@@ -1,1 +1,2 @@
-export const amenities = ['10 Guests', '3 Bedrooms', '9 Beds', '2 Baths'];
+
+export const amenities = ['EV charger', 'Hot Tub', 'Movie Theater','Patio and Balcony', 'Air Conditioning','BBQ grill', 'Wifi','Toaster', 'Bidet','Coffee', 'Cooking Ware', 'Indoor fireplace', 'Outdoor Dining', 'Workspace'];
