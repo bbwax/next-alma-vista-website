@@ -6,6 +6,7 @@ import MapsAPI from './MapsAPI';
 
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
     return (
         <div className="relative h-[33vh] w-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/pinecrestmarina.png')" }}>
             <div className="absolute inset-0 bg-opacity-50 bg-black flex justify-between items-center px-4 md:px-16 py-8">
@@ -35,8 +36,8 @@ export default function Footer() {
                         <a href="https://www.airbnb.com/h/almavista" target="_blank" rel="noreferrer" className="text-white"><AiTwotoneHome size={24} /></a>
                     </div>
                 </div>
-
             </div>
+            <div className=" absolute bottom-0 w-full text-center text-white pb-2 text-xs">{`© ${currentYear} The Alma Vista. All Rights Reserved.`}</div>
         </div>
     );
 }
