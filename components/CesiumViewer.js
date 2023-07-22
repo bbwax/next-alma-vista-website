@@ -51,7 +51,7 @@ function CesiumViewer() {
           maximumHeight: 6000,
           duration: 4 // flight duration in seconds
         });
-      }, 4000); // in ms 
+      }, 2000); // in ms 
 
       // After some more delay, move the camera to the second location
       setTimeout(() => {
