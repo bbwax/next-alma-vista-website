@@ -7,11 +7,10 @@ import Carousel from "@/components/Carousel";
 import FadeIn from "@/components/FadeIn";
 import images from "@/data/images";
 
-
 export default function Home() {
   return (
     <>
-      
+
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-semibold flex justify-center">Welcome</h1>
         <p className=' text-lg p-2 sm:p-4 flex justify-center'>
