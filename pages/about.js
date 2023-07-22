@@ -14,21 +14,12 @@ export default function About() {
     return (
         <>
             <div>
-                <Head>
-                    <meta charset="utf-8" />
-                    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.105/Build/Cesium/Cesium.js"></script>
-                    <link href="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.105/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
-                </Head>
-            </div>
-          
-            <div>
                 <CesiumViewer />
             </div>
             <div className="container mx-auto p-4 flex flex-col justify-center">
                 <h1 className="text-3xl font-semibold flex justify-center ">About </h1>
                 <p className=' text-xl sm:text-3xl p-2 sm:p-4'> Welcome to Alma Vista, a secluded cabin nestled in the mountains of Soulsbyville, California. With stunning views of the surrounding peaks and valleys, this is the perfect getaway.
                 </p>
-
             </div>
             <div>
                 <IconList list={homeInfo} />
