@@ -66,13 +66,20 @@ function CesiumViewer() {
           maximumHeight: 6000,
           duration: 10 // flight duration in seconds
         });
-      }, 9000); // in ms 
+      }, 7500); // in ms 
+      const redMarker = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(-120.253148, 37.993911, 1000),
+        billboard: {
+          image: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+          verticalOrigin: Cesium.VerticalOrigin.BOTTOM
+        }
+      });
     }
   }, []);
 
   return (
     <div className='p-4 rounded-xl space-x-4 w-full h-80 md:h-auto' >
-      <div id="cesiumContainer" className='h-full md:h-auto'/>
+      <div id="cesiumContainer" className='h-full md:h-auto' />
     </div>
   );
 }
