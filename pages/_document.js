@@ -17,10 +17,7 @@ export default function Document() {
             <body>
                 <Main />
                 <NextScript />
-                <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.105/Build/Cesium/Cesium.js"></script>
-                <link href="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.105/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
             </body>
-
         </Html>
     )
 }

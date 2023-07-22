@@ -51,7 +51,7 @@ function CesiumViewer() {
           maximumHeight: 6000,
           duration: 4 // flight duration in seconds
         });
-      }, 2000); // in ms 
+      }, 4000); // in ms 
 
       // After some more delay, move the camera to the second location
       setTimeout(() => {
@@ -66,20 +66,13 @@ function CesiumViewer() {
           maximumHeight: 6000,
           duration: 10 // flight duration in seconds
         });
-      }, 7500); // in ms 
-      const redMarker = viewer.entities.add({
-        position: Cesium.Cartesian3.fromDegrees(-120.253148, 37.993911, 1000),
-        billboard: {
-          image: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-          verticalOrigin: Cesium.VerticalOrigin.BOTTOM
-        }
-      });
+      }, 9000); // in ms 
     }
   }, []);
 
   return (
     <div className='p-4 rounded-xl space-x-4 w-full h-80 md:h-auto' >
-      <div id="cesiumContainer" className='h-full md:h-auto' />
+      <div id="cesiumContainer" className='h-full md:h-auto'/>
     </div>
   );
 }
