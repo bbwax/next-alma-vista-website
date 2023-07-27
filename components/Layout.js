@@ -3,6 +3,7 @@ import HomePageHeader from './HomePageHeader';
 import StandardHeader from './StandardHeader';
 import Footer from './Footer';
 import BackgroundWrapper from './BackgroundWrapper';
+import NavbarIcon from './NavbarIcon';
 
 
 
@@ -13,14 +14,21 @@ export default function Layout({ children }) {
   return (
 
     <div className="relative min-h-screen font-recoleta">
-      <BackgroundWrapper>
-        {isHomePage ? <HomePageHeader /> : <StandardHeader />}
-        <main className="">{children}</main>
-        <div>
-          <Footer />
-        </div>
-      </BackgroundWrapper>
-    </div>
+    <BackgroundWrapper>
+      {isHomePage ? (
+        <>
+          <HomePageHeader />
+          <NavbarIcon />
+        </>
+      ) : (
+        <StandardHeader />
+      )}
+      <main className="pt-6">{children}</main>
+      <div>
+        <Footer />
+      </div>
+    </BackgroundWrapper>
+  </div>
 
   );
 }

@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineClose } from 'react-icons/ai'
+import ModalComponent from './ModalComponent';
 
 export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
   const [index, setIndex] = useState(currentIndex);
   const modalRef = useRef();
+  const [startX, setStartX] = useState(null);
 
   useEffect(() => {
     setIndex(currentIndex);
@@ -16,6 +19,31 @@ export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
       document.removeEventListener('keydown', handleEscapePress);
     };
   }, [currentIndex, onClose]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  }
+
+  const handleTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 100) {
+      nextImage();
+    } else if (startX - endX < -100) {
+      prevImage();
+    }
+  }
 
   const nextImage = () => {
     setIndex((index + 1) % images.length);
@@ -31,24 +59,22 @@ export default function PhotoModal({ isOpen, onClose, images, currentIndex }) {
     }
   };
 
-  if (!isOpen) {
-    return null;
-  }
-
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50" onClick={handleClickOutside}>
-      <div ref={modalRef} className="bg-white relative">
-        <button onClick={onClose} className="absolute top-0 right-0 text-black bg-gray-300 font-bold p-2 transform active:scale-90 transition duration-150">
-          X
+    <ModalComponent isOpen={isOpen} onRequestClose={onClose}>
+      <div ref={modalRef} className="flex items-center justify-center h-full bg-white relative"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}>
+        <button onClick={onClose} className="absolute top-1 right-1 text-black bg-sunset font-bold rounded-full p-2 transform active:scale-90 transition duration-150">
+          <AiOutlineClose />
         </button>
         <img src={images[index].src} alt={images[index].alt} />
-        <button onClick={prevImage} className="absolute top-1/2 left-0 m-2 bg-cyan-300 text-black rounded-full p-2 transform active:scale-90 transition duration-150">
-          Prev
+        <button onClick={prevImage} className="md:block hidden absolute top-1/2 left-2 m-2 bg-sunset text-black rounded-full p-2 ">
+          <AiOutlineDoubleLeft />
         </button>
-        <button onClick={nextImage} className="absolute top-1/2 right-0 m-2 bg-cyan-300 text-black rounded-full p-2 transform active:scale-90 transition duration-150">
-          Next
+        <button onClick={nextImage} className="md:block hidden absolute top-1/2 right-2 m-2 bg-sunset text-black rounded-full p-2 ">
+          <AiOutlineDoubleRight />
         </button>
       </div>
-    </div>
+    </ModalComponent>
   );
 }
