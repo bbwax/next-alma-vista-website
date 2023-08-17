@@ -12,7 +12,8 @@ export default function Document() {
                 <meta property="og:image" content="/images/AlmaVistaSunset.jpg" />
                 <meta property="og:url" content="https://www.almavistacabin.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet" />
-                <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+                <link rel="icon" type="image/x-icon" href="https://www.almavistacabin.com/images/favicon.ico" />
+                <link rel="icon" type="image/png" href="https://www.almavistacabin.com/images/favicon.png" />
             </Head>
             <body>
                 <Main />
