@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carous
 
 function StarRating({ stars }) {
     return (
-        <div className="flex">
+        <div className="flex justify-center">
             {[...Array(stars)].map((_, i) => (
                 <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M10 15.898l-6.816 3.584 1.303-7.588L.389 7.269l7.605-1.106L10 .389l3.006 5.774 7.605 1.106-5.098 4.625 1.303 7.588L10 15.898z" />
