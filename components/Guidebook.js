@@ -73,7 +73,7 @@ export default function Guidebook() {
                 </>
             ),
             image: '/images/kennedy-meadows.jpg',
-            thingsToDo: ['Horseback Riding, Hiking'],
+            thingsToDo: ['Horseback Riding', 'Hiking'],
         },
         {
             name: 'Tuolumne Grove',
